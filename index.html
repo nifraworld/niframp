@@ -20,7 +20,22 @@
 </form>
 
 <main id="lib" hidden>
-  <input id="filter" placeholder="Search songs">
+  <nav id="tabs">
+    <button data-v="songs">Songs</button>
+    <button data-v="album">Albums</button>
+    <button data-v="artist">Artists</button>
+    <button data-v="genre">Genres</button>
+  </nav>
+  <div class="bar">
+    <input id="filter" placeholder="Search">
+    <select id="sort" aria-label="Sort by">
+      <option value="title">Title</option>
+      <option value="artist">Artist</option>
+      <option value="album">Album</option>
+      <option value="year">Year</option>
+    </select>
+  </div>
+  <div id="crumb" hidden><button id="back">← Back</button> <span id="gname"></span></div>
   <ul id="songs"></ul>
 </main>
 

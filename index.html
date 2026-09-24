@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111418">
+<title>NifrAmp</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>NifrAmp</h1><button id="logout" hidden>Log out</button></header>
+
+<form id="login" hidden>
+  <input id="user" placeholder="Username" autocomplete="username" required>
+  <input id="pass" type="password" placeholder="Password" autocomplete="current-password" required>
+  <button>Log in</button>
+  <p id="err"></p>
+</form>
+
+<main id="lib" hidden>
+  <input id="filter" placeholder="Search songs">
+  <ul id="songs"></ul>
+</main>
+
+<footer id="player" hidden>
+  <div id="now"></div>
+  <div class="ctl">
+    <button id="prev" aria-label="Previous">⏮</button>
+    <audio id="audio" controls></audio>
+    <button id="next" aria-label="Next">⏭</button>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
